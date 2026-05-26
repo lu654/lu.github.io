@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header con imagen más clara */
+header {
+    width: 100%;
+    height: 700px;
+    /* Gradiente más transparente para que se vea mejor la imagen */
+    background: linear-gradient(135deg, rgba(2, 36, 227, 0.3), rgba(241, 60, 5, 0.4)), url('IMAGENES/Presentacion_Imprenta.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Wave */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.Titulo {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 65px;
+    color: #034cdd;
+}
+
+.Titulo-catalogo {
+    margin-top:200px;
+    border-left: 5px solid #f13c05;
+    border-right: 5px solid #f13c05;
+    padding-left: 15px;
+    font-size: 50px;
+}
+
+
+/* Contenedor de misión */
+.contenedor-mision {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.texto-mision {
+    flex: 1;
+    min-width: 250px;
+}
+
+.texto-mision h2 {
+    font-size: 28px;
+    color: #f13c05;
+    margin-bottom: 20px;
+    border-left: 5px solid #f13c05;
+    padding-left: 15px;
+}
+
+.texto-mision p {
+    font-size: 25px;
+    line-height: 1.7;
+    color: #000;
+    text-align: justify;
+}
+
+.imagen-Mision {
+    flex: 1;
+    max-width: 690px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Contenedor de catalogo */
+/*.Titulo-catalogo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}*/
+
+.contenedor-catalogo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.texto-catalogo {
+    flex: 1;
+    font-size: 28px;
+}
+
+.imagen-Catalogo {
+    flex: 1;
+    max-width: 459px;
+    width: 100%;
+    border-radius: 80px;
+}
+
+.galeria-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    background-color: #f13c05;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 40px calc(50vw - 50% + 30px);
+    box-sizing: border-box;
+    
+}
+
+.imagen-Cata {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 80px;
+}
+
+@media (max-width: 768px) {
+    .galeria-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .galeria-productos {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== SECCIÓN REDES SOCIALES ===== */
+.redes-sociales {
+    background: linear-gradient(135deg, #0224e3, #f13c05);
+    padding: 80px 20px;
+    margin-top: 50px;
+}
+
+.contenedor-redes {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo-redes {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitulo-redes {
+    font-size: 20px;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 50px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.social-icon span {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Colores específicos para cada red social */
+.social-icon.facebook i {
+    color: #1877f2;
+}
+
+.social-icon.instagram i {
+    color: #e4405f;
+}
+
+.social-icon.whatsapp i {
+    color: #34ce0e;
+}
+
+
+/* Efecto hover */
+.social-icon:hover {
+    transform: translateY(-10px);
+}
+
+.social-icon:hover i {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.contenedor-footer {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contenedor-footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.contenedor-footer p:first-child {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        height: 350px;
+        background-attachment: scroll;
+    }
+    
+    .wave svg {
+        height: 60px;
+    }
+    
+    .contenedor-mision {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .texto-mision h2 {
+        text-align: center;
+        border-left: none;
+        border-bottom: 3px solid #f13c05;
+        padding-bottom: 10px;
+    }
+    
+    .Titulo {
+        font-size: 35px;
+    }
+    
+    /* Responsive para redes sociales */
+    .titulo-redes {
+        font-size: 30px;
+    }
+    
+    .subtitulo-redes {
+        font-size: 16px;
+    }
+    
+    .social-icon i {
+        font-size: 35px;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .social-icon span {
+        font-size: 12px;
+    }
+    
+    .footer p {
+        font-size: 12px;
+    }
+}
